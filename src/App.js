@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path={"/"} element={ <Home /> }></Route>
           <Route path={"/enter-numbers"} element={ <Input /> }></Route>
-          <Route path={"/process-numbers"} element={ <Tree /> }></Route>
+          <Route path={"/process-numbers"} element={ <Tree inputId={1}/> }></Route>
           <Route path={"/previous-trees"} element={ <LastTrees /> }></Route>
         </Routes>
       </div>
