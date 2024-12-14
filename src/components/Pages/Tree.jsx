@@ -5,6 +5,7 @@ export const Tree = () => {
 
     const [input, setInput] = useState({});
     const [tree, setTree] = useState({});
+    const [balancedTree, setBalancedTree] = useState({});
     const [numbers, setNumbers] = useState("");
 
     useEffect(() => {
@@ -16,6 +17,15 @@ export const Tree = () => {
             const treeFromInput = input['treeFromInput'];
             if (treeFromInput && treeFromInput["root"]) {
                 setTree(treeFromInput["root"]);
+            }
+        }
+    }, [input])
+
+    useEffect(() => {
+        if (Object.keys(input).length > 0) {
+            const balancedTreeFromInput = input['balancedTreeFromInput'];
+            if (balancedTreeFromInput && balancedTreeFromInput["root"]) {
+                setBalancedTree(balancedTreeFromInput["root"]);
             }
         }
     }, [input])
@@ -47,12 +57,18 @@ export const Tree = () => {
     }
 
     return (
-        <div>
+        <div className={'treePage'}>
             <NavBar/>
             <h2>Last Input: {numbers}</h2>
-            <div>
-                <h4>JSON Version</h4>
-                <pre>{JSON.stringify(tree, null, 4)}</pre>
+            <div className={'treeBody'}>
+                <div className={'jsonPanel'}>
+                    <h4>Unbalanced Tree</h4>
+                    <pre>{JSON.stringify(tree, null, 4)}</pre>
+                </div>
+                <div className={'jsonPanel'}>
+                    <h4>Balanced Tree</h4>
+                    <pre>{JSON.stringify(balancedTree, null, 4)}</pre>
+                </div>
             </div>
 
 
