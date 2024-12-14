@@ -11,7 +11,7 @@ export const NavBar = () => {
                 <button>Enter Numbers</button>
             </Link>
             <Link to={"/process-numbers"}>
-                <button>Process Numbers</button>
+                <button>View Most Recent Tree</button>
             </Link>
             <Link to={"/previous-trees"}>
                 <button>Previous Trees</button>

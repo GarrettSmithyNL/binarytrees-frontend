@@ -10,7 +10,9 @@
   display: flex;
   flex-direction: column;
   width: 500px;
+  height: 200px;
   align-items: flex-start;
+  justify-content: space-evenly;
   margin-left: 50px;
 }
 
@@ -19,28 +21,38 @@
   width: 250px;
 }
 
+.lastBody {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.treeHolder {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
+}
+
+.numberListItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.showButton {
+  margin-left: 20px;
+}
+
 .treeBody {
   display: flex;
   flex-direction: row;
 }
 
-
-.tree-table {
-  border-collapse: collapse;
-  margin: 0 auto;
+.jsonPanel {
+  margin-left: 50px;
 }
 
-.node-box {
-  border: 1px solid black;
-  padding: 10px;
-  text-align: center;
-}
-
-.children {
-  vertical-align: top;
-}
-
-.invisible-node {
-  width: 100%;
-  height: 100%;
+.homeBody {
+  margin-left: 50px;
 }
